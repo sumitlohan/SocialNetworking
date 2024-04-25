@@ -1,0 +1,35 @@
+# docker-compose.yml
+
+version: '3'
+
+services:
+  social_db:
+    container_name: social_network_db
+    image: mysql/mysql-server:5.7.23
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root_password
+      - MYSQL_DATABASE=social_network_db
+      - MYSQL_ROOT_HOST=%
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  web:
+    container_name: social_network_web
+    build: .
+    command: "python manage.py runserver 0.0.0.0:8000"
+    restart: always
+    environment:
+      - DJANGO_SETTINGS_MODULE=social_networking.settings
+      - DJANGO_SETTINGS_CLASS=Settings
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - social_db
+
+volumes:
+  db_data:

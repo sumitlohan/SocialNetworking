@@ -1,0 +1,86 @@
+# Python bytecode:
+__pycache__
+*.py[co]
+
+# Packaging files:
+*.egg*
+
+# Editor temp files:
+*.swp
+*~
+.DS_STORE
+
+# Sphinx docs:
+build
+
+# database files:
+*.db
+
+# Celerybeat scheduler file:
+celerybeat-schedule
+
+.idea
+.htaccess
+*.iml
+
+# Project Local test folder, useful for testing various scripts etc while developing
+local_test_folder
+
+# Editor temp files:
+*.sw[po]
+
+# ignore ctags files
+tags
+
+# python notebook files
+*ipynb*
+
+# Vim Rope plug in
+*.ropeproject*
+
+# Ansible cache folder
+.ansible
+
+# Sensitive variable files
+deployment/ansible/.env_file
+deployment/ansible/.vault_pass
+deployment/ansible/roles/*/vars/*.encrypted
+
+#local environment, settings, and data
+.envrc
+.env
+env/
+.venv
+.venv/
+.virtualenv/
+pids/
+logs/
+evergreen/
+wkhtmltox/
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+
+# Local developement docker
+dev_local/shared/*
+
+# Coverage
+.coverage
+.coverage*
+htmlcov/
+
+# Sonarscanner
+.scannerwork/*
+
+# XML report
+unit_testcase_report.xml
+
+.scrub.env
+
+# vscode Files
+.vscode
+
+/venv/
+/.docker-sync/
+
+
