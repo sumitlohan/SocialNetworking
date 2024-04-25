@@ -9,3 +9,6 @@ SetUp steps:
 
 To open Django shell:
 make shell
+
+Postman basic instructions:
+Make sure to update Headers with valid token for authenticated api's
